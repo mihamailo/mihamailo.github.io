@@ -9,13 +9,18 @@ $('.icon-menu').click(function(event) {
 });
 
 
+
 $('.menu__link--f').on('click', function(event) {
 	event.preventDefault();
 
 	$('.fall-menu').toggleClass('active');
 	$('.menu__list').toggleClass('menu__list-left');
-	$('.menu__tel').toggleClass('menu__tel-left')
-	$('.menu__call').toggleClass('menu__call-left')
+	$('.menu__tel').toggleClass('menu__tel-left');
+	$('.menu__call').toggleClass('menu__call-left');
+});
+
+$('body').on('click', function(event) {
+	$('.fall-menu.active').toggleClass('active');
 });
 
 $(document).ready(function(){
@@ -32,7 +37,7 @@ $(document).ready(function(){
 		autoplay: true,
 		autoplaySpeed:5000,
 		pauseOnFocus: true,
-		pauseOnHover: true,
+		pauseOnHover: false,
 		pauseOnDotsHover: true,
 	});
 });

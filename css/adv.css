@@ -49,7 +49,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  min-width: 320;
+  min-width: 320px;
   position: relative;
   width: 100%;
   color: #000; }
@@ -968,6 +968,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.2s ease-in-out; }
 
 .intro-screen {
+  margin-top: 100px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

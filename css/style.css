@@ -1127,7 +1127,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 50%;
     -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0);
-    bottom: 50px; }
+    bottom: 50px;}  
   .slider-intro .slick-dots li {
     cursor: pointer;
     display: inline-block;
@@ -2335,3 +2335,9 @@ h1, h2, h3, h4, h5, h6 {
       -webkit-box-flex: 0;
       -ms-flex: 0 1 46%;
       flex: 0 1 46%; } }
+
+ @media(max-width: 530px) {
+    .slider-intro .slick-dots {
+      bottom: 22px;
+    }
+  }
