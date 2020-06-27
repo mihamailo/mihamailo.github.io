@@ -50,7 +50,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  min-width: 320;
+  min-width: 320px;
   position: relative;
   width: 100%;
   color: #000; }
@@ -939,7 +939,7 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../img/main/intro__bg.png") center center no-repeat; }
   @media (max-width: 1662px) {
     .intro {
-      padding-bottom: 92pxpx; } }
+      padding-bottom: 92px; } }
   @media (max-width: 992.98px) {
     .intro {
       padding-bottom: 90px; } }
