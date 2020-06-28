@@ -13,15 +13,22 @@ $('.icon-menu').click(function(event) {
 $('.menu__link--f').on('click', function(event) {
 	event.preventDefault();
 
-	$('.fall-menu').toggleClass('active');
+	if($(this).hasClass('active')) {
+		$("body").on('click', function(event) {
+			console.log('adf')
+		});
+	}
+	else {
+		$('.fall-menu').toggleClass('active');
+	}
+
 	$('.menu__list').toggleClass('menu__list-left');
 	$('.menu__tel').toggleClass('menu__tel-left');
 	$('.menu__call').toggleClass('menu__call-left');
+	$('.menu__link--f').toggleClass('active');
 });
 
-$('body').on('click', function(event) {
-	$('.fall-menu.active').toggleClass('active');
-});
+
 
 $(document).ready(function(){
 	$('.slider-intro').slick({
@@ -102,7 +109,7 @@ checkScroll(scrollOffset) //чтобы при заходе на страницу
 	});
 
 function checkScroll(scrollOffset) {
-	if(scrollOffset >= 100) {
+	if(scrollOffset >= 500) {
 		$('.header').addClass('fixed');
 	}
 	else {
