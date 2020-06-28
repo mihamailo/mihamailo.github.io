@@ -8,8 +8,6 @@ $('.icon-menu').click(function(event) {
 	$('.fall-menu').removeClass('active');
 });
 
-
-
 $('.menu__link--f').on('click', function(event) {
 	event.preventDefault();
 
@@ -19,7 +17,6 @@ $('.menu__link--f').on('click', function(event) {
 	$('.menu__call').toggleClass('menu__call-left');
 	$('.menu__link--f').toggleClass('active');
 });
-
 
 
 $(document).ready(function(){
