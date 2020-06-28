@@ -13,15 +13,7 @@ $('.icon-menu').click(function(event) {
 $('.menu__link--f').on('click', function(event) {
 	event.preventDefault();
 
-	if($(this).hasClass('active')) {
-		$("body").on('click', function(event) {
-			console.log('adf')
-		});
-	}
-	else {
-		$('.fall-menu').toggleClass('active');
-	}
-
+	$('.fall-menu').toggleClass('active')
 	$('.menu__list').toggleClass('menu__list-left');
 	$('.menu__tel').toggleClass('menu__tel-left');
 	$('.menu__call').toggleClass('menu__call-left');
