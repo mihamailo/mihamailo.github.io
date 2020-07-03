@@ -381,8 +381,6 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1 1 auto;
   z-index: 3; }
 
-@media (max-width: 1662px) {
-  .menu__logo-text { } }
 
 @media (max-width: 1300px) {
   .menu__logo-text {
