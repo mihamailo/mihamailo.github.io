@@ -11,13 +11,28 @@ $('.icon-menu').click(function(event) {
 $('.menu__link--f').on('click', function(event) {
 	event.preventDefault();
 
-	$('.fall-menu').toggleClass('active')
+	$('.fall-menu').toggleClass('active');
 	$('.menu__list').toggleClass('menu__list-left');
-	$('.menu__tel').toggleClass('menu__tel-left');
-	$('.menu__call').toggleClass('menu__call-left');
 	$('.menu__link--f').toggleClass('active');
+
+	if ($('#fall-menu').hasClass('active')) {
+		$('.menu__tel').addClass('menu__call-left');
+		$('.menu__call').addClass('menu__tel-left');
+	}
+	else {
+		$('.menu__tel').removeClass('menu__call-left');
+		$('.menu__call').removeClass('menu__tel-left');
+	}
 });
 
+
+document.documentElement.addEventListener('click',function(e) {
+	if (!e.target.closest('.menu__link--f')) {
+		let menu = document.querySelector('.fall-menu');
+		let leftMenu = document.querySelector('.menu__list-left');
+		menu.classList.remove('active');
+	}
+});
 
 $(document).ready(function(){
 	$('.slider-intro').slick({
@@ -77,13 +92,13 @@ $(document).ready(function(){
 	});
 });
 
-	var mainH = $('.intro').innerHeight();
+	var mainH = $('.intro').innerHeight() - 75;
 			scrollOffset =$(window).scrollTop;
 
 $(".scroll").click(function(event) {
 
 		$("html, body").animate({
-			scrollTop: mainH
+			scrollTop: mainH 
 		}, 500);
 
 });
